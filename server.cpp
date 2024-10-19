@@ -45,7 +45,7 @@ DWORD WINAPI client_server(LPVOID lpParamter) {
     return 0;
 }
 char recvBuf[1505], sendBuf[1505];
-int port = 8888; //端口
+int port = 8888; // 端口
 char ip[1024][1024];
 WSADATA wsaData;
 SOCKADDR_IN addrSrv;
@@ -147,7 +147,7 @@ int main() {
         id_free.insert(i);
     client.clear();
     while (1) {
-        //等待客户端
+        // 等待客户端
         cnt = *id_free.begin();
         sockcli[cnt] = accept(sockSrv, (SOCKADDR *)&addrClient[cnt], &len);
         if (sockcli[cnt] == SOCKET_ERROR) {
